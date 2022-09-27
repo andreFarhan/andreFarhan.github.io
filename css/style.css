@@ -1,6 +1,11 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(Poppins-Regular.ttf);
+}
+
 body
 {
-  font-family: sans-serif;
+  font-family: myFirstFont;
   font-weight: 400;
   position: relative;
 }

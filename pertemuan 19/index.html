@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FUNCTION</title>
+</head>
+<body>
+
+<h2>Andre Farhan Saputra - 201011402123</h2>
+<h2>Belajar Menggunakan Function</h2>
+<h3>1. Menghitung Kalkulator</h3>
+<h3>2. Menghitung Luas Trapesium</h3>
+<h3>3. Menghitung Deret Bilangan Genap</h3>
+
+<form onsubmit="submitForm(event)">
+<h3>Pilih: </h3>
+<input type="text" name="input">
+<input type="submit" value="Pilih">
+</form>
+<br>
+<a href="kalkulator.html" id='link_kalkulator'></a>
+<a href="trapesium.html" id='link_trapesium'></a>
+<a href="deret_bilangan.html" id='link_deret'></a>
+
+<script>
+function submitForm(event){
+event.preventDefault();
+pilih(event.target["input"].value);
+}
+
+function pilih(angka) {
+	if (angka == 1) {
+		document.getElementById('link_kalkulator').innerHTML="KALKULATOR";
+	} else if (angka == 2) {
+		document.getElementById('link_trapesium').innerHTML="TRAPESIUM";
+	} else if (angka == 3) {
+		document.getElementById('link_deret').innerHTML="DERET";
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Deret bilangan</title>
+</head>
+<body>
+
+<h3>Andre Farhan Saputra - 201011402123</h3>
+<h2>Deret bilangan GENAP yang habis dibagi 3</h2>
+
+<script>
+function hitungDeret(){
+
+var myForm = document.form1;
+var x=eval(myForm.x.value);
+var y=eval(myForm.y.value);
+
+var hasil = "";
+for (var i = x; i <= y; i+=3) {
+	if (i%2==0){
+		hasil += + i  + " ";
+	}
+}
+  
+
+ myForm.hasil.value = hasil;
+ myForm.x.value = "";
+ myForm.y.value = "";
+}
+
+function resetForm(){
+document.form1.reset();
+}
+</script>
+
+<form name="form1" action="#">
+<table>
+		<tr>
+			<td>Nilai Awal</td>
+			<td>Nilai Akhir</td>
+		</tr>
+		<tr>
+			<td><input type="number" name="x" /></td>
+			<td><input type="number" name="y" /></td>
+			<td><input type="button" value="SUBMIT" onClick="hitungDeret()" /></td>
+			<td><input type="button" value="HAPUS" onClick="resetForm()" /></td>
+		</tr>
+		<tr>
+			<td style="padding-top: 20px;">Deret Yang Tampil:</td>
+		</tr>
+	</table>
+			<textarea rows="5" cols="70" name="hasil" id="hasil" disabled="true"></textarea>
+</form>
+
+<a href="index.html">Kembali</a>
+</body>
+</html>

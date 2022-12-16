@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Kalkulator Sederhana</title>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+
+<!--
+
+function hitung(){
+
+	var myForm = document.form1;
+	var x=eval(myForm.x.value);
+	var y=eval(myForm.y.value);
+	var pil= myForm.opt.value;
+	if (pil == "tambah") {
+		var z = x + y;
+	 }else if (pil == "kurang") {
+		var z = x - y;
+	 } else if (pil == "kali") {
+		var z = x * y;
+	 } else if (pil == "bagi") {
+		var z = x / y;
+	 }
+	 myForm.hasil.value = z;
+	 myForm.x.value = "";
+	 myForm.y.value = "";
+}
+function resetForm(){
+	document.form1.reset();
+}
+
+//-->
+
+</script>
+<form name="form1" action="#">
+<h3>Andre Farhan Saputra - 201011402123</h3>
+<h2>Kalkulator Sederhana</h2>
+<table>
+		<tr>
+			<td>NILAI I</td>
+			<td></td>
+			<td>NILAI II</td>
+		</tr>
+		<tr>
+			<td><input type="number" name="x" /></td>
+			<td align="center">
+				<select name="opt">
+                  <option value="tambah"> + </option>
+                  <option value="kurang"> - </option>
+                  <option value="kali"> x </option>
+                  <option value="bagi"> / </option>
+                </select>
+			</td>
+			<td><input type="number" name="y" /></td>
+			<td><input type="button" value="SUBMIT" onClick="hitung()" /></td>
+		</tr>
+		<tr>
+			<td style="padding-top: 20px;">HASIL</td>
+		</tr>
+		<tr>
+			<td><input type="number" name="hasil" disabled="true" /></td>
+			<td><input type="button" value="HAPUS" onClick="resetForm()" /></td>
+		</tr>
+	</table>
+</form>
+	<a href="index.html">Kembali</a>
+</body>
+</html>
